@@ -10,7 +10,7 @@ this is base class for webpages you can remove System.Web.UI.Page class and add 
 using IAnswerable.Web.Core; 
 namespace MyWebFormApplication
 {
-    public partial class _Default : IAnswerable.Web.WebPage.Page<ProductQueryString>
+    public partial class _Default : IAnswerable.Web.WebPage.Page&lt;ProductQueryString>
     {
         protected void Page_Load(object sender, EventArgs e)
         {
