@@ -1,8 +1,8 @@
 IAnswerable.Web
 ===============
 
-Use of IAnswerable.Web.WebPage.Page<T> class
-============================================
+<h6>Use of IAnswerable.Web.WebPage.Page<T> class</h6>
+
 
 this is base class for webpages you can remove System.Web.UI.Page class and add this for warpping query string strongly typed. check below code
 <pre>
