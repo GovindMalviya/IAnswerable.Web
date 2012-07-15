@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAnswerable.Web", "IAnswerable.Web.csproj", "{26F38391-A8F3-4714-A854-8D379CE91120}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAnswerable.Web", "IAnswerable.Web\IAnswerable.Web.csproj", "{26F38391-A8F3-4714-A854-8D379CE91120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormTest", "..\..\..\WebFormTest\WebFormTest.csproj", "{7B979A1E-9D4B-4FEA-8735-C7554404891A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormTest", "..\..\WebFormTest\WebFormTest.csproj", "{7B979A1E-9D4B-4FEA-8735-C7554404891A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "..\..\..\ConsoleTest\ConsoleTest.csproj", "{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "..\..\ConsoleTest\ConsoleTest.csproj", "{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
