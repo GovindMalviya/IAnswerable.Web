@@ -5,6 +5,8 @@ namespace IAnswerable.Web.Core
     using System.Collections.Generic;
     using System.Reflection;
     using System.Linq;
+    using System.Collections.Specialized;
+    using System;
 
     /// <summary>
     /// Convert Dictionary to Storgly typed class
@@ -17,7 +19,7 @@ namespace IAnswerable.Web.Core
             T t = new T();
 
             PropertyInfo[] _properties = t.GetType().GetProperties();
-        
+
             string key;
 
             foreach (var _property in _properties)
@@ -33,10 +35,23 @@ namespace IAnswerable.Web.Core
                     key = _property.Name;
                 }
 
-                if (value.ContainsKey(key))
+
+                if (keyattribute.IsIgnoreCase)
                 {
-                    _property.SetValue(t, value[key], null);
+                    if (value.Keys.Contains(key, StringComparer.InvariantCultureIgnoreCase))
+                    {
+                        key = value.Keys.Where(item => item.Equals(key, StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
+                        _property.SetValue(t, value[key], null);
+                    }
                 }
+                else
+                {
+                    if (value.ContainsKey(key))
+                    {
+                        _property.SetValue(t, value[key], null);
+                    }
+                }
+                
             }
 
             return t;

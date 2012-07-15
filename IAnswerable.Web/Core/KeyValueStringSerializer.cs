@@ -21,5 +21,43 @@ namespace IAnswerable.Web.Core
             
             return t;
         }
+
+        public string Serialize(T t)
+        {
+            PropertyInfo[] _properties = t.GetType().GetProperties();
+            
+            string[] keyvaluepairstring =new string[_properties.Count()];
+            string key;
+
+            for (int counter = 0;counter< keyvaluepairstring.Length; counter++)
+            {
+                var keyattribute = _properties[counter].GetCustomAttributes(true).OfType<Key>().FirstOrDefault();
+
+                if (keyattribute != null)
+                {
+                    key = keyattribute.Name;
+                }
+                else
+                {
+                    key = _properties[counter].Name;
+                }
+
+                var value =  _properties[counter].GetValue(t, null);
+
+                if (keyattribute.IsIgnoreOnNull)
+                {
+                    if (value != null)
+                    {
+                        keyvaluepairstring[counter] = string.Format("{0}={1}", key, value);
+                    }
+                }
+                else
+                {
+                    keyvaluepairstring[counter] = string.Format("{0}={1}", key, value);
+                }
+            }
+
+            return string.Join("&", keyvaluepairstring.Where(x=> !string.IsNullOrEmpty(x)));
+        }
     }
 }

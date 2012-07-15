@@ -24,7 +24,10 @@ namespace IAnswerable.Web.WebPage
             }
         }
 
-
-
+        public string GetQueryString()
+        {
+            KeyValueStringDeserializer<T> _keyvalueserializer = new KeyValueStringDeserializer<T>();
+            return _keyvalueserializer.Serialize(_querystringmodel);
+        }
     }
 }

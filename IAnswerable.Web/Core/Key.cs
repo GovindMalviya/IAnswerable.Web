@@ -26,5 +26,17 @@ namespace IAnswerable.Web.Core
                 _name = value; 
             }
         }
+
+        public bool IsIgnoreCase
+        {
+            get;
+            set;
+        }
+
+        public bool IsIgnoreOnNull
+        {
+            get;
+            set;
+        }
     }
 }
