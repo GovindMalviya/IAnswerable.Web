@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAnswerable.Web", "IAnswerable.Web\IAnswerable.Web.csproj", "{26F38391-A8F3-4714-A854-8D379CE91120}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormTest", "..\..\WebFormTest\WebFormTest.csproj", "{7B979A1E-9D4B-4FEA-8735-C7554404891A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "..\..\ConsoleTest\ConsoleTest.csproj", "{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,16 +35,6 @@ Global
 		{7B979A1E-9D4B-4FEA-8735-C7554404891A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7B979A1E-9D4B-4FEA-8735-C7554404891A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7B979A1E-9D4B-4FEA-8735-C7554404891A}.Release|x86.ActiveCfg = Release|Any CPU
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Debug|x86.ActiveCfg = Debug|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Debug|x86.Build.0 = Debug|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Release|Any CPU.ActiveCfg = Release|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Release|Mixed Platforms.Build.0 = Release|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Release|x86.ActiveCfg = Release|x86
-		{B1C00F85-BA6A-4368-9ADD-04F523EC3C2F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
