@@ -47,6 +47,7 @@
     <Compile Include="Core\KeyValueStringSerializer.cs" />
     <Compile Include="Core\NameValueCollectionSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebPage\HttpHandler.cs" />
     <Compile Include="WebPage\Page.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
