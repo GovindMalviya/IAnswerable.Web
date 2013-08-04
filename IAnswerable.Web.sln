@@ -1,5 +1,5 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAnswerable.Web", "IAnswerable.Web\IAnswerable.Web.csproj", "{26F38391-A8F3-4714-A854-8D379CE91120}"
 EndProject
