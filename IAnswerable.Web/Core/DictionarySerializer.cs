@@ -12,9 +12,9 @@ namespace IAnswerable.Web.Core
     /// Convert Dictionary to Storgly typed class
     /// </summary>
     /// <typeparam name="T">Class type</typeparam>
-    public class DictionarySerializer<T> where T : class, new()
+    public class DictionaryConverter<T> where T : class, new()
     {
-        public T Deserialize(Dictionary<string, string> value)
+        public T ToDictionary(Dictionary<string, string> value)
         {
             T t = new T();
 
@@ -55,6 +55,46 @@ namespace IAnswerable.Web.Core
             }
 
             return t;
+        }
+
+        public Dictionary<string, string> ToObject(T t)
+        {
+            PropertyInfo[] _properties = t.GetType().GetProperties();
+
+            Dictionary<string, string> converteddictionary = new Dictionary<string, string>(_properties.Count());
+
+   
+            string key;
+
+            for (int counter = 0; counter < _properties.Length; counter++)
+            {
+                var keyattribute = _properties[counter].GetCustomAttributes(true).OfType<Key>().FirstOrDefault();
+
+                if (keyattribute != null)
+                {
+                    key = keyattribute.Name;
+                }
+                else
+                {
+                    key = _properties[counter].Name;
+                }
+
+                var value = _properties[counter].GetValue(t, null);
+
+                if (keyattribute.IsIgnoreOnNull)
+                {
+                    if (value != null)
+                    {
+                        converteddictionary.Add(key, (string)value);
+                    }
+                }
+                else
+                {
+                    converteddictionary.Add(key, (string)value);
+                }
+            }
+
+            return converteddictionary;
         }
     }
 }

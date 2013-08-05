@@ -8,13 +8,13 @@ namespace IAnswerable.Web.Core
 {
     public class NameValueCollectionSerializer<T> where T : class, new()
     {
-        DictionarySerializer<T> _dictionaryserializer = new DictionarySerializer<T>();
+        DictionaryConverter<T> _dictionaryconverter = new DictionaryConverter<T>();
 
         public T Deserialize(NameValueCollection value)
         {
             var dictionary = value.ToDictionary();
 
-            return _dictionaryserializer.Deserialize(dictionary);
+            return _dictionaryconverter.ToDictionary(dictionary);
         }
     }
 
